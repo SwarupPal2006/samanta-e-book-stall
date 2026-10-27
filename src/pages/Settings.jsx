@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import {
   Moon,
   Sun,
-  Heart,
+
   ShieldCheck,
   Globe,
   Info,
@@ -13,7 +13,7 @@ import {
   Languages,
 } from "lucide-react";
 
-import "../Styles/Settings.css";
+import "../Styles/settings.css";
 import Previous from "../services/previousButton";
 
 const APP_VERSION = "1.0.0";
