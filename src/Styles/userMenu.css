@@ -1,0 +1,752 @@
+/* ========================================
+   PRODUCTS PAGE — INDIGO & WHITE THEME
+======================================== */
+
+.products-page {
+  padding: 30px 40px;
+  /* background: #ffffff; */
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Page Header */
+.products-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.products-heading h1 {
+  margin: 6px 0;
+  color: #1e1b4b;
+  font-size: 30px;
+  font-weight: 750;
+  letter-spacing: -0.7px;
+}
+
+.products-heading p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.products-eyebrow {
+  display: inline-block;
+  color: #4338ca;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+/* Previous Button */
+.products-previous {
+  flex-shrink: 0;
+  display: none;
+}
+
+
+
+.back-btn:focus-visible {
+  outline: 3px solid #c7d2fe;
+  outline-offset: 3px;
+}
+
+/* Search Bar */
+.products-search {
+  width: 100%;
+  margin-bottom: 26px;
+}
+
+.products-search input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 16px;
+  border: 1px solid #e0e7ff;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #1e1b4b;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.products-search input::placeholder {
+  color: #94a3b8;
+}
+
+.products-search input:focus {
+  border-color: #4338ca;
+  box-shadow: 0 0 0 3px rgba(67, 56, 202, 0.1);
+}
+
+/* Product Grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  align-items: stretch;
+}
+
+/* Product Card */
+.products-card {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #e8eaff;
+  border-radius: 16px;
+  background: #ffffff;
+  color: #1e1b4b;
+  text-decoration: none;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.products-card:hover {
+  transform: translateY(-4px);
+  border-color: #c7d2fe;
+  box-shadow: 0 10px 28px rgba(67, 56, 202, 0.1);
+}
+
+.products-card:focus-visible {
+  outline: 3px solid #818cf8;
+  outline-offset: 3px;
+}
+
+/* Product Image */
+.products-card-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 220px;
+  padding: 14px;
+  box-sizing: border-box;
+  background: #eef2ff;
+  overflow: hidden;
+}
+
+.products-card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.products-card:hover .products-card-image img {
+  transform: scale(1.04);
+}
+
+.products-image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: #818cf8;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* Product Information */
+.products-card-info {
+  padding: 16px;
+  background: #ffffff;
+}
+
+.products-card-category {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #4338ca;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+.products-card-info h2 {
+  margin: 0;
+  color: #1e1b4b;
+  font-size: 16px;
+  font-weight: 650;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* Empty & Error States */
+.products-empty {
+  padding: 28px 16px;
+  color: #64748b;
+  font-size: 14px;
+  text-align: center;
+}
+
+.products-page [role="alert"] {
+  padding: 12px 16px;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  background: #fef2f2;
+  color: #b91c1c;
+  font-size: 14px;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+/* Small Laptops & Tablets */
+@media (max-width: 1000px) {
+  .products-page {
+    padding: 26px 24px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .products-card-image {
+    height: 200px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .products-page {
+    padding: 14px;
+  }
+
+  .products-page-header {
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .products-heading {
+    min-width: 0;
+  }
+
+  .products-heading h1 {
+    font-size: 24px;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+  }
+
+  .products-heading p {
+    margin-top: 5px;
+    font-size: 13px;
+  }
+
+  .products-eyebrow {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .products-previous {
+    flex-shrink: 0;
+    display: block;
+  }
+
+  .back-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .back-btn svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .products-search {
+    margin-bottom: 20px;
+  }
+
+  .products-search input {
+    padding: 12px 13px;
+    border-radius: 10px;
+    font-size: 13px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .products-card {
+    border-radius: 12px;
+  }
+
+  .products-card-image {
+    height: 155px;
+
+  }
+
+  .products-card-info {
+    padding: 11px;
+  }
+
+  .products-card-category {
+    margin-bottom: 4px;
+    font-size: 9px;
+    letter-spacing: 0.5px;
+  }
+
+  .products-card-info h2 {
+    font-size: 13px;
+    line-height: 1.2;
+  }
+}
+
+/* Very Small Phones */
+@media (max-width: 360px) {
+  .products-page {
+    padding: 18px 10px;
+  }
+
+  .products-grid {
+    gap: 9px;
+  }
+
+  .products-card-image {
+    height: 135px;
+    padding: 7px;
+  }
+
+  .products-card-info {
+    padding: 9px;
+  }
+
+  .products-card-info h2 {
+    font-size: 12px;
+  }
+}
+
+/* Reduced Motion Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .products-card,
+  .products-card-image img,
+  .back-btn {
+    transition: none;
+  }
+
+  .products-card:hover,
+  .products-card:hover .products-card-image img,
+  .back-btn:hover {
+    transform: none;
+  }
+}
+
+/* Previous button and heading layout */
+.products-page-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.products-heading {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  width: 100%;
+}
+
+/* Hidden on desktop */
+.products-heading .products-previous {
+  display: none;
+}
+
+/* Mobile: button left, heading and description right */
+@media (max-width: 600px) {
+  .products-page-header {
+    align-items: center;
+  }
+
+  .products-heading {
+    display: grid;
+    grid-template-columns: 38px minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    column-gap: 12px;
+    align-items: center;
+  }
+
+  .products-heading .products-previous {
+    display: flex;
+    grid-column: 1;
+    grid-row: 1 / 3;
+    align-self: center;
+    align-items: center;
+  }
+
+  .products-heading h1 {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 2px;
+    font-size: 22px;
+    line-height: 1.3;
+  }
+
+  .products-heading p {
+    grid-column: 2;
+    grid-row: 2;
+    margin-top: 4px;
+    font-size: 12px;
+  }
+
+  .products-heading .back-btn {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+
+/* ========================================
+   BOOKS PAGE — INDIGO & WHITE THEME
+======================================== */
+
+.books-page {
+  min-height: 100vh;
+  padding: 30px 40px;
+  box-sizing: border-box;
+  /* background: #ffffff; */
+}
+
+/* Header */
+.books-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.books-heading {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  width: 100%;
+}
+
+.books-heading h1 {
+  margin: 6px 0;
+  color: #1e1b4b;
+  font-size: 30px;
+  font-weight: 750;
+  letter-spacing: -0.7px;
+}
+
+.books-heading p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Previous Button */
+.books-previous {
+  display: none;
+  flex-shrink: 0;
+}
+
+
+
+.books-previous .back-btn:hover {
+  background: #4338ca;
+  color: #ffffff;
+}
+
+/* Search */
+.books-search {
+  width: 100%;
+  margin-bottom: 26px;
+}
+
+.books-search input {
+  display: block;
+  width: 100%;
+  padding: 14px 16px;
+  box-sizing: border-box;
+  border: 1px solid #e0e7ff;
+  border-radius: 12px;
+  outline: none;
+  background: #ffffff;
+  color: #1e1b4b;
+  font-family: inherit;
+  font-size: 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.books-search input::placeholder {
+  color: #94a3b8;
+}
+
+.books-search input:focus {
+  border-color: #4338ca;
+  box-shadow: 0 0 0 3px rgba(67, 56, 202, 0.1);
+}
+
+/* Grid */
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  align-items: stretch;
+}
+
+/* Book Card */
+.books-card {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #e8eaff;
+  border-radius: 16px;
+  background: #ffffff;
+  color: #1e1b4b;
+  text-decoration: none;
+  transition: transform 0.25s ease, border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.books-card:hover {
+  transform: translateY(-4px);
+  border-color: #c7d2fe;
+  box-shadow: 0 10px 28px rgba(67, 56, 202, 0.1);
+}
+
+.books-card:focus-visible {
+  outline: 3px solid #818cf8;
+  outline-offset: 3px;
+}
+
+/* Book Image */
+.books-card-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 220px;
+  padding: 14px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #eef2ff;
+}
+
+.books-card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.books-card:hover .books-card-image img {
+  transform: scale(1.04);
+}
+
+.books-image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: #818cf8;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* Book Information */
+.books-card-info {
+  padding: 16px;
+  background: #ffffff;
+}
+
+.books-card-category {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #4338ca;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+.books-card-info h2 {
+  margin: 0;
+  color: #1e1b4b;
+  font-size: 16px;
+  font-weight: 650;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* Empty & Error States */
+.books-empty {
+  padding: 28px 16px;
+  color: #64748b;
+  font-size: 14px;
+  text-align: center;
+}
+
+.books-error {
+  padding: 12px 16px;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  background: #fef2f2;
+  color: #b91c1c;
+  font-size: 14px;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+  .books-page {
+    padding: 26px 24px;
+  }
+
+  .books-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .books-card-image {
+    height: 200px;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+  .books-page {
+    padding: 22px 14px;
+  }
+
+  .books-page-header {
+    margin-bottom: 20px;
+  }
+
+  /* Previous button on left, heading on right */
+  .books-heading {
+    display: grid;
+    grid-template-columns: 38px minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    align-items: center;
+    column-gap: 12px;
+  }
+
+  .books-previous {
+    display: flex;
+    grid-column: 1;
+    grid-row: 1 / 3;
+    align-self: center;
+  }
+
+  .books-previous .back-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .books-heading h1 {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0;
+    font-size: 22px;
+    line-height: 1.3;
+    letter-spacing: -0.4px;
+  }
+
+  .books-heading p {
+    grid-column: 2;
+    grid-row: 2;
+    margin-top: 4px;
+    font-size: 12px;
+  }
+
+  .books-search {
+    margin-bottom: 20px;
+  }
+
+  .books-search input {
+    padding: 12px 13px;
+    border-radius: 10px;
+    font-size: 13px;
+  }
+
+  .books-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .books-card {
+    border-radius: 12px;
+  }
+
+  .books-card-image {
+    height: 155px;
+    padding: 9px;
+  }
+
+  .books-card-info {
+    padding: 11px;
+  }
+
+  .books-card-category {
+    margin-bottom: 6px;
+    font-size: 9px;
+    letter-spacing: 0.5px;
+  }
+
+  .books-card-info h2 {
+    font-size: 13px;
+    line-height: 1.45;
+  }
+}
+
+/* Very Small Phones */
+@media (max-width: 360px) {
+  .books-page {
+    padding: 18px 10px;
+  }
+
+  .books-grid {
+    gap: 9px;
+  }
+
+  .books-card-image {
+    height: 135px;
+    padding: 7px;
+  }
+
+  .books-card-info {
+    padding: 9px;
+  }
+
+  .books-card-info h2 {
+    font-size: 12px;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .books-card,
+  .books-card-image img,
+  .books-previous .back-btn {
+    transition: none;
+  }
+
+  .books-card:hover,
+  .books-card:hover .books-card-image img {
+    transform: none;
+  }
+}

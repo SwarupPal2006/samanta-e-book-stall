@@ -1,0 +1,12 @@
+.back-btn{
+    border: none;
+    background: none;
+    flex-shrink: 2;
+    display: none;
+    color: rgb(64, 6, 141);
+}
+@media (max-width: 600px) {
+  .back-btn {
+    display: block;
+  }
+}

@@ -1,0 +1,83 @@
+.login-bg {
+  background-image: url("https://img.freepik.com/premium-photo/blurred-background-blur-bookshelves-book-store-background-education-concept_1168123-39453.jpg");
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-size: cover;
+  background-position: center;
+}
+
+.login-container {
+  background: #ffffff;
+  padding: 30px 50px;
+  border-radius: 16px;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  opacity: 0.95;
+}
+
+.login-container h2 {
+  margin-bottom: 24px;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.input-group {
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 6px;
+  color: #333;
+  font-size: 15px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.input-group input:focus {
+  border-color: #4f8cff;
+  outline: none;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background: #4f8cff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background: #2563eb;
+}
+
+.signup-link {
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+.signup-link a {
+  color: #4f8cff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}

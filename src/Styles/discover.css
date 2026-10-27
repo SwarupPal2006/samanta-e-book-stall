@@ -1,0 +1,499 @@
+
+/* ========================================
+   DISCOVER — INDIGO & WHITE THEME
+======================================== */
+
+.discover {
+  --discover-indigo: #4338ca;
+  --discover-indigo-dark: #1e1b4b;
+  --discover-indigo-light: #eef2ff;
+  --discover-border: #e0e7ff;
+  --discover-muted: #64748b;
+
+  min-height: 100vh;
+  padding: 30px 40px;
+  box-sizing: border-box;
+  background: #ffffff;
+  color: var(--discover-indigo-dark);
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+.search-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.discover-previous {
+  flex-shrink: 0;
+  display: none;
+}
+
+/* Reuse existing Previous component */
+.discover-previous .back-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  color: var(--discover-indigo);
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.discover-previous .back-btn:hover {
+  background: var(--discover-indigo);
+  color: #ffffff;
+  
+}
+
+.discover-heading {
+  min-width: 0;
+}
+
+.discover-eyebrow {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--discover-indigo);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+
+.discover-heading h1 {
+  margin: 0;
+  color: var(--discover-indigo-dark);
+  font-size: 30px;
+  font-weight: 750;
+  letter-spacing: -0.7px;
+}
+
+.discover-heading p {
+  margin: 6px 0 0;
+  color: var(--discover-muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ========================================
+   SEARCH BAR
+======================================== */
+
+.discover-search {
+  width: 100%;
+  margin-bottom: 28px;
+}
+
+.search-bar {
+  display: block;
+  width: 100%;
+  min-height: 48px;
+  padding: 13px 16px;
+  box-sizing: border-box;
+
+  border: 1px solid var(--discover-border);
+  border-radius: 12px;
+  outline: none;
+
+  background: #ffffff;
+  color: var(--discover-indigo-dark);
+  font-family: inherit;
+  font-size: 14px;
+
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-bar::placeholder {
+  color: #94a3b8;
+}
+
+.search-bar:focus {
+  border-color: var(--discover-indigo);
+  box-shadow: 0 0 0 3px rgba(67, 56, 202, 0.1);
+}
+
+/* ========================================
+   ALPHABET FILTER
+======================================== */
+
+.discover-filter-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #e8eaff;
+  border-radius: 16px;
+  background: #f8faff;
+}
+
+.discover-filter-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.discover-filter-heading h2 {
+  margin: 0;
+  color: var(--discover-indigo-dark);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.discover-reset {
+  flex-shrink: 0;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--discover-indigo);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.discover-reset:hover {
+  background: var(--discover-indigo-light);
+}
+
+/* Alphabet buttons */
+.letters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.letters button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 34px;
+  height: 34px;
+  padding: 0 9px;
+
+  border: 1px solid var(--discover-border);
+  border-radius: 9px;
+
+  background: #ffffff;
+  color: #475569;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.letters button:hover {
+  border-color: #a5b4fc;
+  background: var(--discover-indigo-light);
+  color: var(--discover-indigo);
+}
+
+.letters button.selected {
+  border-color: var(--discover-indigo);
+  background: var(--discover-indigo);
+  color: #ffffff;
+}
+
+.letters button:focus-visible,
+.discover-reset:focus-visible {
+  outline: 2px solid var(--discover-indigo);
+  outline-offset: 3px;
+}
+
+.letters .all-letters {
+  padding: 0 13px;
+}
+
+/* ========================================
+   RESULTS HEADER
+======================================== */
+
+.discover-results {
+  min-width: 0;
+}
+
+.discover-results-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.discover-results-header h2 {
+  margin: 0;
+  color: var(--discover-indigo-dark);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.discover-count {
+  flex-shrink: 0;
+  padding: 6px 11px;
+  border: 1px solid var(--discover-border);
+  border-radius: 20px;
+  background: var(--discover-indigo-light);
+  color: var(--discover-indigo);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ========================================
+   BOOKCARD GRID
+======================================== */
+
+.discover-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 22px;
+}
+
+/* Ensure BookCard wrappers fit the grid */
+.discover-grid > * {
+  min-width: 0;
+}
+
+/* ========================================
+   LOADING, ERROR & EMPTY STATES
+======================================== */
+
+.discover-message {
+  padding: 24px 16px;
+  color: var(--discover-muted);
+  font-size: 14px;
+  text-align: center;
+}
+
+.discover-error {
+  padding: 14px 16px;
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+  background: #fef2f2;
+  color: #b91c1c;
+  font-size: 14px;
+}
+
+.discover-empty {
+  padding: 40px 20px;
+  border: 1px dashed #c7d2fe;
+  border-radius: 16px;
+  background: #f8faff;
+  text-align: center;
+}
+
+.discover-empty h3 {
+  margin: 0 0 8px;
+  color: var(--discover-indigo-dark);
+  font-size: 18px;
+}
+
+.discover-empty p {
+  margin: 0 0 18px;
+  color: var(--discover-muted);
+  font-size: 14px;
+}
+
+.discover-empty button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 9px;
+  background: var(--discover-indigo);
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.discover-empty button:hover {
+  background: #3730a3;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+  .discover {
+    padding: 26px 24px;
+  }
+
+  .discover-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .discover-filter-section {
+    padding: 18px;
+  }
+
+  .letters {
+    gap: 7px;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+  .discover {
+    padding: 20px 14px;
+  }
+
+  .search-header {
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .discover-previous, .back-btn {
+    width: 38px;
+    height: 38px;
+    display: block;
+  }
+
+  .discover-heading h1 {
+    font-size: 24px;
+    letter-spacing: -0.4px;
+  }
+
+  .discover-heading p {
+    margin-top: 4px;
+    font-size: 12px;
+  }
+
+  .discover-eyebrow {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .discover-search {
+    margin-bottom: 20px;
+  }
+
+  .search-bar {
+    min-height: 44px;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 13px;
+  }
+
+  .discover-filter-section {
+    margin-bottom: 24px;
+    padding: 14px 12px;
+    border-radius: 13px;
+  }
+
+  .discover-filter-heading {
+    margin-bottom: 13px;
+    align-items: flex-start;
+  }
+
+  .discover-filter-heading h2 {
+    font-size: 14px;
+  }
+
+  .discover-reset {
+    padding: 5px 6px;
+    font-size: 11px;
+  }
+
+  .letters {
+    gap: 6px;
+  }
+
+  .letters button {
+    min-width: 30px;
+    height: 31px;
+    padding: 0 7px;
+    border-radius: 8px;
+    font-size: 11px;
+  }
+
+  .letters .all-letters {
+    padding: 0 10px;
+  }
+
+  .discover-results-header {
+    margin-bottom: 15px;
+  }
+
+  .discover-results-header h2 {
+    font-size: 17px;
+  }
+
+  .discover-count {
+    padding: 5px 9px;
+    font-size: 11px;
+  }
+
+  .discover-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .discover-empty {
+    padding: 30px 14px;
+  }
+
+  .discover-empty h3 {
+    font-size: 16px;
+  }
+
+  .discover-empty p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+}
+
+/* ========================================
+   VERY SMALL PHONES
+======================================== */
+
+@media (max-width: 360px) {
+  .discover {
+    padding: 18px 10px;
+  }
+
+  .discover-filter-section {
+    padding: 12px 9px;
+  }
+
+  .letters {
+    gap: 5px;
+  }
+
+  .letters button {
+    min-width: 27px;
+    height: 29px;
+    padding: 0 5px;
+    font-size: 10px;
+  }
+
+  .discover-grid {
+    gap: 9px;
+  }
+}
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .letters button,
+  .search-bar,
+  .discover-previous .back-btn {
+    transition: none;
+  }
+}
