@@ -49,17 +49,21 @@ const BookCard = ({
     <div className="card-wrapper">
       <Link to={`/product/${book.id}`} className="card-link">
         <div className="card">
-          {imageUrl ? (
-            <img
-              src={imageUrl}
-              alt={book.title}
-              loading="lazy"
-            />
-          ) : (
-            <div className="book-image-placeholder">
-              No image available
-            </div>
-          )}
+          
+<div className="card-image-container">
+  {imageUrl ? (
+    <img
+      src={imageUrl}
+      alt={book.title || "Book cover"}
+      loading="lazy"
+    />
+  ) : (
+    <div className="book-image-placeholder">
+      No image available
+    </div>
+  )}
+</div>
+
 
           <div className="card-info">
             <p className="card-category">

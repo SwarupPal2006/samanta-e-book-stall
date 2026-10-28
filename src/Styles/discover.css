@@ -121,7 +121,7 @@
 ======================================== */
 
 .discover-filter-section {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   padding: 20px;
   border: 1px solid #e8eaff;
   border-radius: 16px;
@@ -390,7 +390,7 @@
   }
 
   .discover-filter-section {
-    margin-bottom: 24px;
+    margin-bottom: 14px;
     padding: 14px 12px;
     border-radius: 13px;
   }

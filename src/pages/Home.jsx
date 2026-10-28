@@ -1,4 +1,4 @@
-
+import InstallAppPrompt from "../components/InstallAppPrompt";
 import {
   ChevronRight,
   Zap,
@@ -75,6 +75,7 @@ if (active) {
 
   return (
     <div>
+       <InstallAppPrompt />
       <section className="home-hero">
         <div className="hero-overlay"></div>
 

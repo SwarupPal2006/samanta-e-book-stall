@@ -1,0 +1,160 @@
+
+.install-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: rgba(15, 12, 40, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: installFadeIn 0.25s ease;
+}
+
+.install-modal {
+  position: relative;
+  width: 100%;
+  max-width: 370px;
+  padding: 32px 24px 24px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #e0e7ff;
+  border-radius: 24px;
+  box-shadow: 0 24px 70px rgba(30, 27, 75, 0.25);
+  animation: installSlideUp 0.3s ease;
+}
+
+.install-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px !important;
+  height: 36px;
+  padding: 8px !important;
+  display: grid;
+  place-items: center;
+  color: #64748b;
+  background: #f1f5f9;
+  border: none;
+  border-radius: 50% !important;
+  cursor: pointer;
+}
+
+.install-icon {
+  display: grid;
+  place-items: center;
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 18px;
+  color: #4338ca;
+  background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+  border: 1px solid #c7d2fe;
+  border-radius: 22px;
+}
+
+.install-modal h2 {
+  margin: 0 0 12px;
+  color: #312e81;
+  font-size: 23px;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.install-modal p {
+  margin: 0 0 24px;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.install-modal button {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 650;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.install-modal .install-yes,
+.install-modal .install-no {
+  width: 100%;
+  min-height: 48px;
+  padding: 13px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.install-yes {
+  color: #ffffff;
+  background: linear-gradient(135deg, #4f46e5, #3730a3);
+  box-shadow: 0 6px 18px rgba(79, 70, 229, 0.25);
+}
+
+.install-modal .install-no {
+  margin-top: 10px;
+  color: #4338ca;
+  background: #eef2ff;
+}
+
+.install-close:hover,
+.install-no:hover {
+  background: #e0e7ff;
+}
+
+.install-yes:hover {
+  background: linear-gradient(135deg, #4338ca, #312e81);
+}
+
+.install-modal button:hover {
+  transform: translateY(-2px);
+}
+
+.install-modal button:focus-visible {
+  outline: 3px solid #818cf8;
+  outline-offset: 3px;
+}
+
+@keyframes installFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes installSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 480px) {
+  .install-modal {
+    max-width: 340px;
+    padding: 30px 20px 20px;
+    border-radius: 22px;
+  }
+
+  .install-modal h2 {
+    font-size: 21px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .install-overlay,
+  .install-modal {
+    animation: none;
+  }
+
+  .install-modal button {
+    transition: none;
+  }
+}

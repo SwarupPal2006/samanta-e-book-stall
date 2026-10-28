@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.89.0",
     "axios": "^1.15.2",
     "firebase": "^13.1.0",
     "lucide-react": "^1.14.0",
@@ -25,12 +24,10 @@
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.1.1",
-    "autoprefixer": "^10.5.0",
     "eslint": "^9.39.1",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
-    "postcss": "^8.5.13",
     "tailwindcss": "^4.2.4",
     "vite": "^7.2.4"
   }

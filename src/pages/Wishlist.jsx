@@ -21,10 +21,10 @@ export default function Wishlist() {
 
   return (
     <main className="wishlist-page">
-      {/* MOBILE PREVIOUS BUTTON */}
-      <div className="wishlist-previous">
+      
+      {/* <div className="wishlist-previous">
         <Previous />
-      </div>
+      </div> */}
 
       {/* PAGE HEADER */}
       <header className="wishlist-header">

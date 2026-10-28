@@ -1,16 +1,16 @@
 const categories = [
-  "All",
-  "Fiction",
   "Academic",
-  "Self-help",
   "Arts",
-  "Pen",
+  "Combo Pack",
+  "Comics/Fiction",
+  "Mythology",
   "Notebooks",
-  "Sports",
-  "Comics",
   "Novels",
+  "Pen",
+  "Self-help",
+  "Sports",
   "Stationery",
-  "Mythology"
+  "Story Book"
 ];
 
 export default categories;

@@ -453,7 +453,7 @@
   margin-bottom: 8px;
   color: #1a73e8;
   font-size: 10px;
-  font-weight: 700;
+  font-weight: 550;
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
@@ -591,7 +591,7 @@
     align-items: center;
     gap: 8px;
     min-height: 50px;
-    margin-bottom: 14px;
+    margin-bottom: 10px;
     width: 100%;
   }
 
@@ -653,7 +653,7 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    gap: 22px;
+    gap: 14px;
     width: 100%;
   }
 

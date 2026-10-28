@@ -1,0 +1,28 @@
+
+{
+  "id": "/",
+  "name": "Samanta E-Book Stall",
+  "short_name": "Samanta Books",
+  "description": "Discover and explore books at Samanta E-Book Stall.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#A5B4FC",
+  "theme_color": "#818CF8",
+  "categories": ["books", "shopping"],
+  "icons": [
+    {
+      "src": "/logo-round.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/logo-round.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

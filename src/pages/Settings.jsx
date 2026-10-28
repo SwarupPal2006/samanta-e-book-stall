@@ -4,13 +4,13 @@ import { useNavigate } from "react-router-dom";
 import {
   Moon,
   Sun,
-
   ShieldCheck,
   Globe,
   Info,
   ChevronRight,
-  Settings as SettingsIcon,
   Languages,
+  Share2,
+  BookmarkCheck
 } from "lucide-react";
 
 import "../Styles/settings.css";
@@ -44,21 +44,47 @@ const Settings = () => {
     localStorage.setItem("language", selectedLanguage);
   };
 
+  const handleShareApp = async () => {
+    const shareUrl = window.location.origin;
+
+    const shareData = {
+      title: "Samanta E-Book Stall",
+      text: "Discover books at Samanta E-Book Stall!",
+      url: shareUrl,
+    };
+
+    try {
+      if (navigator.share) {
+        await navigator.share(shareData);
+      } else if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(shareUrl);
+        window.alert("App link copied! Share it with your friends.");
+      } else {
+        window.prompt("Copy and share this app link:", shareUrl);
+      }
+    } catch (error) {
+      if (error.name !== "AbortError") {
+        console.error("Unable to share app:", error);
+        window.prompt("Copy your app link:", shareUrl);
+      }
+    }
+  };
+
   return (
     <div className={`settings-page ${darkMode ? "settings-dark" : ""}`}>
       <div className="settings-container">
 
-{/* HEADER */}
-<header className="settings-header">
-  <div className="settings-back">
-    <Previous />
-  </div>
+        {/* HEADER */}
+        <header className="settings-header">
+          <div className="settings-back">
+            <Previous />
+          </div>
 
-  <div className="settings-title">
-    <h1>Settings</h1>
-    <p>Make your experience feel like yours.</p>
-  </div>
-</header>
+          <div className="settings-title">
+            <h1>Settings</h1>
+            <p>Make your experience feel like yours.</p>
+          </div>
+        </header>
 
         {/* APPEARANCE */}
         <section className="settings-group">
@@ -129,15 +155,41 @@ const Settings = () => {
           <h2 className="settings-group-title">Your Space</h2>
 
           <div className="settings-card">
+            {/* WISHLIST */}
             <button
               type="button"
               className="settings-row settings-action"
               onClick={() => navigate("/wishlist")}
             >
-
+              <div className="settings-icon share-icon">
+                <BookmarkCheck size={21} />
+              </div>
               <div className="settings-info">
                 <h3>Wishlist</h3>
                 <p>Revisit your saved favourite items.</p>
+              </div>
+
+              <ChevronRight
+                className="settings-chevron"
+                size={20}
+              />
+            </button>
+
+            <div className="settings-divider" />
+
+            {/* SHARE APP */}
+            <button
+              type="button"
+              className="settings-row settings-action"
+              onClick={handleShareApp}
+            >
+              <div className="settings-icon share-icon">
+                <Share2 size={21} />
+              </div>
+
+              <div className="settings-info">
+                <h3>Share This App</h3>
+                <p>Recommend Samanta E-Book Stall to friends.</p>
               </div>
 
               <ChevronRight
@@ -203,6 +255,7 @@ const Settings = () => {
           <div className="settings-footer-mark">
             <Globe size={15} />
           </div>
+
           <p>Thoughtfully designed for your everyday needs.</p>
           <span>Version {APP_VERSION}</span>
         </footer>
