@@ -78,6 +78,7 @@ export default function AdminLogin() {
   }
 
   return (
+    <div className="admin-shell">
     <main className="admin-login-page">
       {/* Animated background */}
       <div className="login-orb login-orb-one" />
@@ -264,5 +265,7 @@ export default function AdminLogin() {
         <span>Admin Portal</span>
       </footer>
     </main>
+    </div>
+
   );
 }

@@ -2,7 +2,9 @@
 /* ======================================
    ADMIN LOGIN — INDIGO & WHITE
 ====================================== */
-
+body:has(.admin-shell) {
+  padding-top: 0 !important;
+}
 .admin-login-page {
   --login-primary: #4338ca;
   --login-primary-dark: #3730a3;
