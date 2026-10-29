@@ -423,7 +423,7 @@ export default function AdminDashboard() {
               <section className="panel import-panel">
                 <div className="panel-heading"><div><h2>Bulk CSV import</h2><p>Import multiple books or products at once.</p></div><span className="heading-icon"><Upload size={17} /></span></div>
                 <label htmlFor="csv-upload" className="upload-zone"><Upload size={21} /><strong>Choose a CSV file</strong><span>CSV format · Existing catalogue import logic</span><input id="csv-upload" type="file" accept=".csv,text/csv" onChange={handleCSV} disabled={busy} /></label>
-                <a href="/catalogue-template.csv" download className="admin-download">Download CSV template</a>
+                <a href="https://docs.google.com/spreadsheets/d/1ThMXh5610RUNsBwwgnclSB_AmsJozRRQXJmtN-gXGuk/edit?usp=sharing" target="_main"download className="admin-download">Download CSV template</a>
               </section>
               </div>
             </div>
