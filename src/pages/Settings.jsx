@@ -8,7 +8,7 @@ import {
   Globe,
   Info,
   ChevronRight,
-  Languages,
+  MonitorSmartphone,
   Share2,
   BookmarkCheck
 } from "lucide-react";
@@ -125,28 +125,17 @@ const Settings = () => {
 
             {/* LANGUAGE */}
             <div className="settings-row">
-              <div className="settings-icon language-icon">
-                <Languages size={21} />
-              </div>
+  <div className="settings-icon language-icon">
+    <MonitorSmartphonegit size={21} />
+  </div>
 
-              <div className="settings-info">
-                <h3>Language</h3>
-                <p>Choose your preferred language.</p>
-              </div>
-
-              <div className="language-select-wrap">
-                <select
-                  className="language-select"
-                  value={language}
-                  onChange={handleLanguageChange}
-                  aria-label="Select language"
-                >
-                  <option value="en">English</option>
-                  <option value="bn">বাংলা</option>
-                  <option value="hi">हिन्दी</option>
-                </select>
-              </div>
-            </div>
+  <div className="settings-info">
+    <h3>Browsing Experience</h3>
+    <p>
+      Enjoy a smooth, comfortable and user-friendly browsing experience.
+    </p>
+  </div>
+</div>
           </div>
         </section>
 
