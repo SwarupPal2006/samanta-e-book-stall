@@ -323,13 +323,13 @@
    TABLET
 ======================================== */
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .discover {
     padding: 26px 24px;
   }
 
   .discover-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 18px;
   }
 
