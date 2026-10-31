@@ -126,7 +126,7 @@ const Settings = () => {
             {/* LANGUAGE */}
             <div className="settings-row">
   <div className="settings-icon language-icon">
-    <MonitorSmartphonegit size={21} />
+    <MonitorSmartphone size={21} />
   </div>
 
   <div className="settings-info">
